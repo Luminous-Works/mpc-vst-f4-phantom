@@ -137,3 +137,7 @@ MIT. DSP building blocks (`framework/dsp/*) are part of the MPC Plugin SDK.
 - 8 voices (0 inputs, 2 outputs). Stereo comes from the chorus; with Chorus Mix at 0 the output is mono on both channels.
 - A soft limiter on the master rounds off chords on hot patches instead of hard-clipping.
 - Version 1.1.0 added Sub Level, Drift, Chorus and VULCAN (all appended) and the 14-sound bank; indices 0-33 are unchanged from 1.0.0.
+
+## Contact
+
+owner@luminousworksllc.com (Lumina Aerospace LLC). Reports of what works and what does not on your MPC are welcome: device, MPC OS version, what happened.
