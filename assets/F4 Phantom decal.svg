@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <!-- F4 PHANTOM — animated pixel-ghost decal, Lumina Aerospace LLC -->
+  <!-- Space Black #0A0A0A, Telemetry Neon Blue #00F2FF -->
+
+  <defs>
+    <style>
+      @keyframes float-ghost {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-11px); }
+      }
+      @keyframes float-ghost-sway {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(-6px); }
+      }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        40% { opacity: 1; }
+        50% { opacity: 0.5; }
+        60% { opacity: 1; }
+      }
+      @keyframes flicker-fast {
+        0%, 100% { opacity: 1; }
+        45% { opacity: 1; }
+        50% { opacity: 0.25; }
+        55% { opacity: 1; }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.75; }
+      }
+      @keyframes blink-eye {
+        0%, 88%, 100% { transform: scaleY(1); }
+        93% { transform: scaleY(0.08); }
+      }
+      @keyframes trail-fade {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.7; }
+      }
+
+      /* One element per motion. Two animations on the SAME element that both set `transform` do not combine: the last one
+         wins and the other never plays (the vertical float was silently dead). Float (Y) on the outer group, sway (X) on the
+         inner one. Placement stays on the plain group around both. */
+      #ghost-float  { animation: float-ghost 5s ease-in-out infinite; }
+      #ghost-pixels { animation: float-ghost-sway 7s ease-in-out infinite; }
+      #glow-circle { animation: pulse-glow 3.2s ease-in-out infinite; }
+      .pix { animation-fill-mode: both; }
+      .pix.slow  { animation: flicker 4.0s infinite; }
+      .pix.med   { animation: flicker 2.9s infinite; animation-delay: 1.1s; }
+      .pix.fast  { animation: flicker-fast 2.1s infinite; animation-delay: 2.2s; }
+      .pix.trail { animation: trail-fade 2.6s infinite; }
+      /* transform-box: fill-box makes 'center' the eye's own centre; the SVG default is the whole 1000x1000 canvas */
+      .eye { animation: blink-eye 5s infinite; transform-box: fill-box; transform-origin: center; }
+      .txt-glow { filter: drop-shadow(0 0 6px #00F2FF88); }
+    </style>
+
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#00F2FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00F2FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent decal background -->
+  <rect width="1000" height="1000" fill="none"/>
+
+  <!-- Outer shield -->
+  <path d="M 500 60 C 120 60 60 260 60 500 C 60 740 260 940 500 940 C 740 940 940 740 940 500 C 940 260 880 60 500 60 Z"
+        fill="#0A0A0A" stroke="#00F2FF" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M 500 72 C 140 72 72 300 72 500 C 72 700 260 884 500 884 C 740 884 928 700 928 500 C 928 300 860 72 500 72 Z"
+        fill="none" stroke="#1E1E1E" stroke-width="5"/>
+
+  <!-- Center glow oval: cx=500 cy=500 r=400 spans y=100-900, centered in decal -->
+  <circle id="glow-circle" cx="500" cy="500" r="400" fill="url(#glow)" filter="url(#softglow)"/>
+
+  <!-- ===== PIXEL GHOST (animated) ===== -->
+  <!-- ghost body: 282x282px, x 40..322, own horizontal centre 181 -->
+  <!-- PLACEMENT is on this outer group and must never be animated. The CSS float animation sets `transform` on
+       #ghost-pixels, and a CSS transform REPLACES a transform attribute on the same element: with placement and
+       animation on one element the ghost snapped to the top-left corner (0,0). So: outer = where, inner = floating.
+       scale 1.1 -> 310px ghost; tx = 500 - 181*1.1 = 300.9 centres its body on x=500 (the F4 text axis);
+       ty = 170 puts its feet at y=480, a 46px gap above the F4 cap line (~526). -->
+  <g transform="translate(300.9, 170) scale(1.1)">
+  <g id="ghost-float">
+  <g id="ghost-pixels">
+    <!-- pixel unit: 26px block, 6px gap -->
+    <!-- row 0: head top -->
+    <rect class="pix slow" x="104" y="0"  width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="136" y="0"  width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="168" y="0"  width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="200" y="0"  width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="232" y="0"  width="26" height="26" fill="#00F2FF"/>
+    <!-- row 1 -->
+    <rect class="pix fast" x="72"  y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="104" y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="136" y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="168" y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="200" y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="232" y="32" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="264" y="32" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 2 -->
+    <rect class="pix med"  x="72"  y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="104" y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="136" y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="168" y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="200" y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="232" y="64" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="264" y="64" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 3: sides + eyes -->
+    <rect class="pix slow" x="40"  y="96" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="288" y="96" width="26" height="26" fill="#00F2FF"/>
+    <rect class="eye" x="128" y="96" width="20" height="20" fill="#0A0A0A"/>
+    <rect class="eye" x="200" y="96" width="20" height="20" fill="#0A0A0A"/>
+    <!-- row 4 -->
+    <rect class="pix med"  x="40"  y="128" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="288" y="128" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 5: widest body -->
+    <rect class="pix fast" x="40"  y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="72"  y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="104" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="136" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="168" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="200" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="232" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="264" y="160" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="296" y="160" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 6: arms -->
+    <rect class="pix fast" x="72"  y="192" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="264" y="192" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 7 -->
+    <rect class="pix slow" x="104" y="224" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="136" y="224" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix med"  x="200" y="224" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix slow" x="232" y="224" width="26" height="26" fill="#00F2FF"/>
+    <!-- row 8 -->
+    <rect class="pix fast" x="136" y="256" width="26" height="26" fill="#00F2FF"/>
+    <rect class="pix fast" x="200" y="256" width="26" height="26" fill="#00F2FF"/>
+    <!-- pixel trail (right side) -->
+    <rect class="pix trail" x="330" y="160" width="22" height="22" fill="#00F2FF"/>
+    <rect class="pix trail" x="330" y="192" width="22" height="22" fill="#00F2FF"/>
+    <rect class="pix trail" x="330" y="224" width="22" height="22" fill="#00F2FF"/>
+  </g>
+  </g>
+  </g>
+
+  <!-- F4 -->
+  <text class="txt-glow" x="500" y="610" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="120" font-weight="800"
+        letter-spacing="8" fill="#00F2FF" style="text-transform: uppercase;">F4</text>
+  <!-- PHANTOM -->
+  <text x="500" y="668" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="46" font-weight="600"
+        letter-spacing="16" fill="#C8C8C8" style="text-transform: uppercase;">PHANTOM</text>
+
+  <!-- Divider -->
+  <line x1="360" y1="708" x2="640" y2="708" stroke="#1E1E1E" stroke-width="3"/>
+
+  <!-- Bottom band: LUMINA AEROSPACE LLC + RETRO FUTURE MISSION CONTROL -->
+  <path d="M 100 740 Q 500 710 900 740 L 900 830 Q 500 860 100 830 Z" fill="#101010" stroke="#00F2FF" stroke-width="8"/>
+  <text x="500" y="774" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="28" font-weight="800"
+        letter-spacing="5" fill="#00F2FF" style="text-transform: uppercase;">LUMINA AEROSPACE LLC</text>
+  <text x="500" y="810" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="20" font-weight="600"
+        letter-spacing="4" fill="#C8C8C8" style="text-transform: uppercase;">RETRO FUTURE MISSION CONTROL</text>
+
+  <!-- Top edge machined highlight -->
+  <path d="M 60 60 Q 500 16 940 60" fill="none" stroke="#2A2A2A" stroke-width="6" stroke-linecap="round"/>
+</svg>

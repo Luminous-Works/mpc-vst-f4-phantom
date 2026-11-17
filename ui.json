@@ -1,0 +1,227 @@
+{
+  "pages": [
+    {
+      "name": "OSC",
+      "controls": [
+        {
+          "param": "Volume",
+          "widget": "fader"
+        },
+        {
+          "param": "Osc1 Wave",
+          "widget": "switch"
+        },
+        {
+          "param": "Osc1 Octave",
+          "widget": "knob"
+        },
+        {
+          "param": "Osc1 Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Osc2 Wave",
+          "widget": "switch"
+        },
+        {
+          "param": "Osc2 Octave",
+          "widget": "knob"
+        },
+        {
+          "param": "Osc2 Semi",
+          "widget": "knob"
+        },
+        {
+          "param": "Osc2 Detune",
+          "widget": "knob"
+        },
+        {
+          "param": "Osc2 Level",
+          "widget": "fader"
+        },
+        {
+          "param": "Pulse Width",
+          "widget": "knob"
+        },
+        {
+          "param": "Glide",
+          "widget": "knob"
+        },
+        {
+          "param": "Bend Range",
+          "widget": "knob"
+        },
+        {
+          "param": "Sub Level",
+          "widget": "knob"
+        },
+        {
+          "param": "Drift",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "FILTER",
+      "controls": [
+        {
+          "param": "Cutoff",
+          "widget": "knob"
+        },
+        {
+          "param": "Resonance",
+          "widget": "knob"
+        },
+        {
+          "param": "Filter Mode",
+          "widget": "switch"
+        },
+        {
+          "param": "Drive",
+          "widget": "knob"
+        },
+        {
+          "param": "Env Amount",
+          "widget": "knob",
+          "polarity": "bipolar"
+        },
+        {
+          "param": "Key Track",
+          "widget": "knob"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "param": "Filt Attack",
+          "widget": "fader"
+        },
+        {
+          "param": "Filt Decay",
+          "widget": "fader"
+        },
+        {
+          "param": "Filt Sustain",
+          "widget": "fader"
+        },
+        {
+          "param": "Filt Release",
+          "widget": "fader"
+        }
+      ]
+    },
+    {
+      "name": "AMP",
+      "controls": [
+        {
+          "param": "Amp Attack",
+          "widget": "fader"
+        },
+        {
+          "param": "Amp Decay",
+          "widget": "fader"
+        },
+        {
+          "param": "Amp Sustain",
+          "widget": "fader"
+        },
+        {
+          "param": "Amp Release",
+          "widget": "fader"
+        },
+        {
+          "param": "Velocity",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "LFO",
+      "controls": [
+        {
+          "param": "LFO Shape",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "LFO Sync",
+          "widget": "switch"
+        },
+        {
+          "param": "LFO Rate",
+          "widget": "knob",
+          "visibleWhen": {
+            "param": "LFO Sync",
+            "choice": "Off"
+          }
+        },
+        {
+          "param": "LFO Div",
+          "widget": "slider",
+          "overlay": "menu",
+          "visibleWhen": {
+            "param": "LFO Sync",
+            "choice": "On"
+          }
+        },
+        {
+          "param": "LFO>Pitch",
+          "widget": "knob"
+        },
+        {
+          "param": "LFO>Filter",
+          "widget": "knob"
+        },
+        {
+          "param": "Wheel Vib",
+          "widget": "knob"
+        }
+      ]
+    },
+    {
+      "name": "FX",
+      "controls": [
+        {
+          "param": "Chorus Mix",
+          "widget": "knob"
+        },
+        {
+          "param": "Chorus Depth",
+          "widget": "knob"
+        },
+        {
+          "param": "Chorus Rate",
+          "widget": "knob"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "param": "Vulcan Depth",
+          "widget": "knob"
+        },
+        {
+          "param": "Vulcan Rate",
+          "widget": "knob"
+        },
+        {
+          "param": "Vulcan Spin",
+          "widget": "knob"
+        },
+        {
+          "param": "Vulcan Spread",
+          "widget": "knob"
+        }
+      ]
+    }
+  ],
+  "style": {
+    "background": "ff0a0a0a",
+    "accent": "ff00f2ff",
+    "text": "ffc8c8c8",
+    "muted": "ff8c97a8"
+  }
+}
