@@ -42,30 +42,50 @@ def ghost_rects(project):
 
 
 def ghost_frame(norm, rects):
+    """One frame of the Phantom dial: the ghost itself, the value arc, and the glow.
+
+    The ghost is still the animated part: its pixels brighten as the filter opens, its eyes slide from left to
+    right and it rises a little. The bloom under the pixels is what makes it read as a glow on the MPC's screen
+    rather than a flat picture.
+    """
     w = FS * SS
     c = w / 2
     img = Image.new("RGBA", (w, w), (0, 0, 0, 0))
+    emis = Image.new("RGBA", (w, w), (0, 0, 0, 0))   # the bright parts, for the bloom
+    d = ImageDraw.Draw(img)
+    de = ImageDraw.Draw(emis)
+
+    # the halo behind the ghost, which grows with the cutoff
     glow = Image.new("RGBA", (w, w), (0, 0, 0, 0))
     ImageDraw.Draw(glow).ellipse((c - 32 * SS, c - 32 * SS, c + 32 * SS, c + 32 * SS), fill=CYAN + (int(25 + 140 * norm),))
     img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(7 * SS)))
-    d = ImageDraw.Draw(img)
+
+    # the value arc: a hairline track with the lit part on top, in the house style
     bb = (c - 42 * SS, c - 42 * SS, c + 42 * SS, c + 42 * SS)
-    d.arc(bb, 135, 405, fill=(60, 60, 64, 255), width=int(5 * SS))
+    d.arc(bb, 135, 405, fill=(22, 34, 43, 255), width=SS)
     if norm > 0.003:
-        d.arc(bb, 135, 135 + 270 * norm, fill=CYAN + (255,), width=int(5 * SS))
+        d.arc(bb, 135, 135 + 270 * norm, fill=CYAN + (255,), width=2 * SS)
+        de.arc(bb, 135, 135 + 270 * norm, fill=CYAN + (255,), width=2 * SS)
+
     # the ghost: 282 x 282 source units -> 50 px; it rises up to 3 px as the filter opens
     k = 50.0 * SS / 282.0
     ox = c - (40 + 282 / 2.0) * k + 0.0          # body spans x 40..322 -> centre it
     oy = c - 141 * k - 3 * SS * norm
     bright = int(150 + 105 * norm)
     for (x, y) in rects:
-        d.rectangle((ox + x * k, oy + y * k, ox + (x + 26) * k - 0.6 * SS, oy + (y + 26) * k - 0.6 * SS), fill=(CYAN[0], CYAN[1], bright, 255))
+        box = (ox + x * k, oy + y * k, ox + (x + 26) * k - 0.6 * SS, oy + (y + 26) * k - 0.6 * SS)
+        d.rectangle(box, fill=(CYAN[0], CYAN[1], bright, 255))
+        de.rectangle(box, fill=(CYAN[0], CYAN[1], bright, 255))
     # eyes: bright pixels in the head, sliding left -> right with the cutoff
     ex = (norm - 0.5) * 28.0
     for exx in (128, 200):
         x0 = ox + (exx + ex) * k
         y0 = oy + 96 * k
         d.rectangle((x0, y0, x0 + 20 * k, y0 + 20 * k), fill=(255, 255, 255, 255))
+        de.rectangle((x0, y0, x0 + 20 * k, y0 + 20 * k), fill=(255, 255, 255, 255))
+
+    # the bloom: the bright parts, blurred, under the crisp art
+    img.alpha_composite(emis.filter(ImageFilter.GaussianBlur(2.5 * SS)))
     return img.resize((FS, FS), Image.LANCZOS)
 
 

@@ -320,6 +320,14 @@ public:
             program(name, v);
         };
 
+        // ---- 8BIT: square waves, no filter, fast decay ----
+        patch("8BIT LEAD", kLead, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 40}, {kCutoff, 12000}, {kReso, 0}, {kEnvAmount, 10}, {kChorusMix, 0}, {kReverbMix, 8}});
+        patch("8BIT BASS", kBass, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 10000}, {kReso, 0}, {kEnvAmount, 10}, {kDecay, 150}, {kSubLevel, 30}, {kReverbMix, 5}});
+        patch("8BIT KEY", kKey, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 35}, {kCutoff, 11000}, {kReso, 0}, {kChorusMix, 20}, {kReverbMix, 10}});
+        patch("8BIT PAD", kPad, {{kOsc1Wave, 3}, {kPulseWidth, 25}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 9000}, {kReso, 0}, {kChorusMix, 35}, {kReverbMix, 15}});
+        patch("8BIT STRINGS", kStrings, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 10000}, {kReso, 0}, {kChorusMix, 30}, {kReverbMix, 12}});
+        patch("8BIT BRASS", kBrass, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 35}, {kCutoff, 9000}, {kReso, 0}, {kDecay, 250}, {kSustain, 40}, {kChorusMix, 25}});
+
         // ---- ACID: the 303, all resonance and glide ----
         patch("ACID LEAD", kLead, {{kCutoff, 2400}, {kReso, 80}, {kEnvAmount, 90}, {kDrive, 40}, {kGlide, 120}, {kDelayMix, 12}});
         patch("ACID BASS", kBass, {{kCutoff, 600}, {kReso, 85}, {kEnvAmount, 95}, {kDrive, 45}, {kDecay, 150}, {kSustain, 20}, {kGlide, 80}});
@@ -336,6 +344,21 @@ public:
         patch("AMBIENT STRINGS", kStrings, {{kCutoff, 2000}, {kAttack, 600}, {kChorusMix, 75}, {kReverbMix, 60}, {kReverbDecay, 6.0f}});
         patch("AMBIENT BRASS", kBrass, {{kCutoff, 1800}, {kAttack, 500}, {kChorusMix, 60}, {kReverbMix, 55}, {kReverbDecay, 5.5f}});
 
+        // ---- BREAKBEAT: grit and punch ----
+        patch("BREAKBEAT LEAD", kLead, {{kCutoff, 3400}, {kReso, 35}, {kDrive, 35}, {kDelayMix, 22}, {kReverbMix, 22}});
+        patch("BREAKBEAT BASS", kBass, {{kCutoff, 650}, {kReso, 45}, {kDrive, 45}, {kSubLevel, 60}, {kDecay, 200}, {kChorusMix, 10}});
+        patch("BREAKBEAT KEY", kKey, {{kCutoff, 2400}, {kChorusMix, 45}, {kReverbMix, 25}});
+        patch("BREAKBEAT PAD", kPad, {{kCutoff, 1300}, {kChorusMix, 65}, {kReverbMix, 45}});
+        patch("BREAKBEAT STRINGS", kStrings, {{kCutoff, 2200}, {kChorusMix, 55}, {kReverbMix, 35}});
+        patch("BREAKBEAT BRASS", kBrass, {{kCutoff, 2100}, {kDrive, 40}, {kChorusMix, 40}});
+        // ---- COUNTRY: clean and twangy ----
+        patch("COUNTRY LEAD", kLead, {{kCutoff, 3600}, {kChorusMix, 35}, {kDelayMix, 18}});
+        patch("COUNTRY BASS", kBass, {{kCutoff, 800}, {kSubLevel, 50}, {kDecay, 220}, {kChorusMix, 12}});
+        patch("COUNTRY KEY", kKey, {{kCutoff, 2800}, {kChorusMix, 45}, {kReverbMix, 22}});
+        patch("COUNTRY PAD", kPad, {{kCutoff, 1600}, {kChorusMix, 60}, {kReverbMix, 35}});
+        patch("COUNTRY STRINGS", kStrings, {{kCutoff, 2800}, {kChorusMix, 55}, {kReverbMix, 30}});
+        patch("COUNTRY BRASS", kBrass, {{kCutoff, 2800}, {kChorusMix, 50}, {kReverbMix, 25}});
+
         // ---- DISCO: lush, bright, chorus everywhere ----
         patch("DISCO LEAD", kLead, {{kCutoff, 4200}, {kChorusMix, 60}, {kDelayMix, 25}});
         patch("DISCO BASS", kBass, {{kCutoff, 800}, {kDrive, 30}, {kChorusMix, 25}, {kReverbMix, 14}});
@@ -343,6 +366,14 @@ public:
         patch("DISCO PAD", kPad, {{kCutoff, 2400}, {kChorusMix, 85}, {kReverbMix, 50}, {kLfoRate, 0.5f}});
         patch("DISCO STRINGS", kStrings, {{kCutoff, 3200}, {kChorusMix, 70}, {kReverbMix, 40}});
         patch("DISCO BRASS", kBrass, {{kCutoff, 2800}, {kChorusMix, 50}, {kReverbMix, 32}});
+
+        // ---- DISCO HOUSE: the nu-disco shine ----
+        patch("DISCO HOUSE LEAD", kLead, {{kCutoff, 4000}, {kChorusMix, 55}, {kDelayMix, 22}, {kDelaySync, 1}, {kDelayDiv, 7}});
+        patch("DISCO HOUSE BASS", kBass, {{kCutoff, 850}, {kDrive, 30}, {kSubLevel, 45}, {kDecay, 200}, {kChorusMix, 15}});
+        patch("DISCO HOUSE KEY", kKey, {{kCutoff, 3200}, {kChorusMix, 70}, {kReverbMix, 30}});
+        patch("DISCO HOUSE PAD", kPad, {{kCutoff, 2200}, {kChorusMix, 80}, {kReverbMix, 45}});
+        patch("DISCO HOUSE STRINGS", kStrings, {{kCutoff, 3000}, {kChorusMix, 70}, {kReverbMix, 35}});
+        patch("DISCO HOUSE BRASS", kBrass, {{kCutoff, 2800}, {kDrive, 25}, {kChorusMix, 50}});
 
         // ---- DNB: the Reese bass and the wide pad ----
         patch("DNB LEAD", kLead, {{kCutoff, 4200}, {kReso, 25}, {kDrive, 25}, {kDelayMix, 20}, {kDelaySync, 1}, {kDelayDiv, 4}, {kReverbMix, 20}});
@@ -384,6 +415,22 @@ public:
         patch("FUNK STRINGS", kStrings, {{kCutoff, 2200}, {kDecay, 300}, {kAttack, 200}});
         patch("FUNK BRASS", kBrass, {{kCutoff, 2000}, {kEnvAmount, 70}, {kAttack, 40}});
 
+        // ---- GOSPEL: organ-like, full, tremolo ----
+        patch("GOSPEL LEAD", kLead, {{kCutoff, 3000}, {kLfoShape, 0}, {kLfoRate, 5.0f}, {kLfoPitch, 0.08f}, {kChorusMix, 45}, {kReverbMix, 25}});
+        patch("GOSPEL BASS", kBass, {{kCutoff, 550}, {kSubLevel, 60}, {kDrive, 25}, {kChorusMix, 15}});
+        patch("GOSPEL KEY", kKey, {{kCutoff, 2600}, {kChorusMix, 60}, {kReverbMix, 30}});
+        patch("GOSPEL PAD", kPad, {{kCutoff, 1600}, {kChorusMix, 75}, {kReverbMix, 45}});
+        patch("GOSPEL STRINGS", kStrings, {{kCutoff, 2400}, {kChorusMix, 65}, {kReverbMix, 40}});
+        patch("GOSPEL BRASS", kBrass, {{kCutoff, 2400}, {kDrive, 25}, {kChorusMix, 55}});
+
+        // ---- HARDSTYLE: massive and distorted ----
+        patch("HARDSTYLE LEAD", kLead, {{kCutoff, 3200}, {kDrive, 45}, {kChorusMix, 55}, {kReverbMix, 20}});
+        patch("HARDSTYLE BASS", kBass, {{kCutoff, 450}, {kReso, 60}, {kDrive, 60}, {kSubLevel, 80}, {kDecay, 500}, {kSustain, 80}});
+        patch("HARDSTYLE KEY", kKey, {{kCutoff, 2200}, {kDrive, 35}, {kChorusMix, 40}});
+        patch("HARDSTYLE PAD", kPad, {{kCutoff, 1200}, {kChorusMix, 70}, {kReverbMix, 45}});
+        patch("HARDSTYLE STRINGS", kStrings, {{kCutoff, 2200}, {kDrive, 40}, {kChorusMix, 55}});
+        patch("HARDSTYLE BRASS", kBrass, {{kCutoff, 2000}, {kDrive, 50}, {kChorusMix, 35}});
+
         // ---- HIPHOP: filtered, deep, wide ----
         patch("HIPHOP LEAD", kLead, {{kCutoff, 2200}, {kReso, 25}, {kChorusMix, 40}, {kReverbMix, 22}});
         patch("HIPHOP BASS", kBass, {{kCutoff, 500}, {kSubLevel, 70}, {kDrive, 25}, {kDecay, 180}, {kChorusMix, 10}});
@@ -407,6 +454,14 @@ public:
         patch("INDIE PAD", kPad, {{kCutoff, 1500}, {kChorusMix, 70}, {kReverbMix, 45}});
         patch("INDIE STRINGS", kStrings, {{kCutoff, 2200}, {kChorusMix, 60}, {kReverbMix, 35}});
         patch("INDIE BRASS", kBrass, {{kCutoff, 2200}, {kChorusMix, 45}, {kReverbMix, 30}});
+
+        // ---- INDUSTRIAL: harsh and mechanical ----
+        patch("INDUSTRIAL LEAD", kLead, {{kCutoff, 2800}, {kReso, 55}, {kDrive, 55}, {kLfoShape, 2}, {kLfoRate, 9.0f}, {kLfoPitch, 0.16f}, {kDelayMix, 25}});
+        patch("INDUSTRIAL BASS", kBass, {{kCutoff, 600}, {kReso, 60}, {kDrive, 55}, {kSubLevel, 60}, {kChorusMix, 10}});
+        patch("INDUSTRIAL KEY", kKey, {{kCutoff, 2000}, {kReso, 45}, {kChorusMix, 40}});
+        patch("INDUSTRIAL PAD", kPad, {{kCutoff, 1100}, {kReso, 40}, {kChorusMix, 60}, {kReverbMix, 45}});
+        patch("INDUSTRIAL STRINGS", kStrings, {{kCutoff, 1800}, {kDrive, 40}, {kChorusMix, 45}});
+        patch("INDUSTRIAL BRASS", kBrass, {{kCutoff, 1700}, {kReso, 50}, {kDrive, 50}, {kChorusMix, 35}});
 
         // ---- JAZZ: rounded, with vibrato ----
         patch("JAZZ LEAD", kLead, {{kCutoff, 2600}, {kChorusMix, 35}, {kLfoShape, 0}, {kLfoRate, 5.0f}, {kLfoPitch, 0.06f}});
@@ -439,6 +494,14 @@ public:
         patch("POP PAD", kPad, {{kCutoff, 2000}, {kChorusMix, 65}, {kReverbMix, 40}});
         patch("POP STRINGS", kStrings, {{kCutoff, 2800}, {kChorusMix, 55}, {kReverbMix, 30}});
         patch("POP BRASS", kBrass, {{kCutoff, 2400}, {kDrive, 20}, {kChorusMix, 45}});
+
+        // ---- PSYTRANCE: the moving one ----
+        patch("PSYTRANCE LEAD", kLead, {{kCutoff, 4200}, {kReso, 45}, {kLfoShape, 2}, {kLfoRate, 7.0f}, {kLfoPitch, 0.14f}, {kDelayMix, 25}, {kDelaySync, 1}, {kDelayDiv, 4}, {kReverbMix, 25}});
+        patch("PSYTRANCE BASS", kBass, {{kCutoff, 900}, {kReso, 45}, {kDrive, 35}, {kGlide, 50}, {kChorusMix, 15}});
+        patch("PSYTRANCE KEY", kKey, {{kCutoff, 2800}, {kChorusMix, 55}, {kReverbMix, 30}});
+        patch("PSYTRANCE PAD", kPad, {{kCutoff, 1800}, {kLfoShape, 2}, {kLfoRate, 5.0f}, {kLfoFilter, 0.45f}, {kChorusMix, 75}, {kReverbMix, 50}});
+        patch("PSYTRANCE STRINGS", kStrings, {{kCutoff, 2600}, {kLfoShape, 2}, {kLfoRate, 6.0f}, {kLfoPitch, 0.10f}, {kChorusMix, 60}});
+        patch("PSYTRANCE BRASS", kBrass, {{kCutoff, 2400}, {kReso, 35}, {kDrive, 35}, {kChorusMix, 45}});
 
         // ---- RNB: smooth, warm, slow ----
         patch("RNB LEAD", kLead, {{kCutoff, 2400}, {kLfoShape, 0}, {kLfoRate, 4.5f}, {kLfoPitch, 0.05f}, {kChorusMix, 50}, {kReverbMix, 25}});
@@ -488,14 +551,6 @@ public:
         patch("TRAP STRINGS", kStrings, {{kCutoff, 2200}, {kChorusMix, 65}, {kReverbMix, 32}});
         patch("TRAP BRASS", kBrass, {{kCutoff, 1900}, {kDrive, 30}, {kReverbMix, 25}});
 
-        // ---- 8BIT: square waves, no filter, fast decay ----
-        patch("8BIT LEAD", kLead, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 40}, {kCutoff, 12000}, {kReso, 0}, {kEnvAmount, 10}, {kChorusMix, 0}, {kReverbMix, 8}});
-        patch("8BIT BASS", kBass, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 10000}, {kReso, 0}, {kEnvAmount, 10}, {kDecay, 150}, {kSubLevel, 30}, {kReverbMix, 5}});
-        patch("8BIT KEY", kKey, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 35}, {kCutoff, 11000}, {kReso, 0}, {kChorusMix, 20}, {kReverbMix, 10}});
-        patch("8BIT PAD", kPad, {{kOsc1Wave, 3}, {kPulseWidth, 25}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 9000}, {kReso, 0}, {kChorusMix, 35}, {kReverbMix, 15}});
-        patch("8BIT STRINGS", kStrings, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 30}, {kCutoff, 10000}, {kReso, 0}, {kChorusMix, 30}, {kReverbMix, 12}});
-        patch("8BIT BRASS", kBrass, {{kOsc1Wave, 3}, {kOsc2Wave, 3}, {kOsc2Level, 35}, {kCutoff, 9000}, {kReso, 0}, {kDecay, 250}, {kSustain, 40}, {kChorusMix, 25}});
-
         // ---- UKG: bouncy, shuffled, warm ----
         patch("UKG LEAD", kLead, {{kCutoff, 2600}, {kChorusMix, 45}, {kDelayMix, 20}, {kDelaySync, 1}, {kDelayDiv, 4}, {kReverbMix, 20}});
         patch("UKG BASS", kBass, {{kCutoff, 750}, {kReso, 40}, {kEnvAmount, 75}, {kDecay, 180}, {kSubLevel, 45}, {kChorusMix, 15}});
@@ -504,61 +559,6 @@ public:
         patch("UKG STRINGS", kStrings, {{kCutoff, 2000}, {kChorusMix, 55}, {kReverbMix, 35}});
         patch("UKG BRASS", kBrass, {{kCutoff, 2200}, {kReso, 30}, {kDrive, 30}, {kChorusMix, 45}});
 
-        // ---- HARDSTYLE: massive and distorted ----
-        patch("HARDSTYLE LEAD", kLead, {{kCutoff, 3200}, {kDrive, 45}, {kChorusMix, 55}, {kReverbMix, 20}});
-        patch("HARDSTYLE BASS", kBass, {{kCutoff, 450}, {kReso, 60}, {kDrive, 60}, {kSubLevel, 80}, {kDecay, 500}, {kSustain, 80}});
-        patch("HARDSTYLE KEY", kKey, {{kCutoff, 2200}, {kDrive, 35}, {kChorusMix, 40}});
-        patch("HARDSTYLE PAD", kPad, {{kCutoff, 1200}, {kChorusMix, 70}, {kReverbMix, 45}});
-        patch("HARDSTYLE STRINGS", kStrings, {{kCutoff, 2200}, {kDrive, 40}, {kChorusMix, 55}});
-        patch("HARDSTYLE BRASS", kBrass, {{kCutoff, 2000}, {kDrive, 50}, {kChorusMix, 35}});
-
-        // ---- PSYTRANCE: the moving one ----
-        patch("PSYTRANCE LEAD", kLead, {{kCutoff, 4200}, {kReso, 45}, {kLfoShape, 2}, {kLfoRate, 7.0f}, {kLfoPitch, 0.14f}, {kDelayMix, 25}, {kDelaySync, 1}, {kDelayDiv, 4}, {kReverbMix, 25}});
-        patch("PSYTRANCE BASS", kBass, {{kCutoff, 900}, {kReso, 45}, {kDrive, 35}, {kGlide, 50}, {kChorusMix, 15}});
-        patch("PSYTRANCE KEY", kKey, {{kCutoff, 2800}, {kChorusMix, 55}, {kReverbMix, 30}});
-        patch("PSYTRANCE PAD", kPad, {{kCutoff, 1800}, {kLfoShape, 2}, {kLfoRate, 5.0f}, {kLfoFilter, 0.45f}, {kChorusMix, 75}, {kReverbMix, 50}});
-        patch("PSYTRANCE STRINGS", kStrings, {{kCutoff, 2600}, {kLfoShape, 2}, {kLfoRate, 6.0f}, {kLfoPitch, 0.10f}, {kChorusMix, 60}});
-        patch("PSYTRANCE BRASS", kBrass, {{kCutoff, 2400}, {kReso, 35}, {kDrive, 35}, {kChorusMix, 45}});
-
-        // ---- DISCO HOUSE: the nu-disco shine ----
-        patch("DISCO HOUSE LEAD", kLead, {{kCutoff, 4000}, {kChorusMix, 55}, {kDelayMix, 22}, {kDelaySync, 1}, {kDelayDiv, 7}});
-        patch("DISCO HOUSE BASS", kBass, {{kCutoff, 850}, {kDrive, 30}, {kSubLevel, 45}, {kDecay, 200}, {kChorusMix, 15}});
-        patch("DISCO HOUSE KEY", kKey, {{kCutoff, 3200}, {kChorusMix, 70}, {kReverbMix, 30}});
-        patch("DISCO HOUSE PAD", kPad, {{kCutoff, 2200}, {kChorusMix, 80}, {kReverbMix, 45}});
-        patch("DISCO HOUSE STRINGS", kStrings, {{kCutoff, 3000}, {kChorusMix, 70}, {kReverbMix, 35}});
-        patch("DISCO HOUSE BRASS", kBrass, {{kCutoff, 2800}, {kDrive, 25}, {kChorusMix, 50}});
-
-        // ---- GOSPEL: organ-like, full, tremolo ----
-        patch("GOSPEL LEAD", kLead, {{kCutoff, 3000}, {kLfoShape, 0}, {kLfoRate, 5.0f}, {kLfoPitch, 0.08f}, {kChorusMix, 45}, {kReverbMix, 25}});
-        patch("GOSPEL BASS", kBass, {{kCutoff, 550}, {kSubLevel, 60}, {kDrive, 25}, {kChorusMix, 15}});
-        patch("GOSPEL KEY", kKey, {{kCutoff, 2600}, {kChorusMix, 60}, {kReverbMix, 30}});
-        patch("GOSPEL PAD", kPad, {{kCutoff, 1600}, {kChorusMix, 75}, {kReverbMix, 45}});
-        patch("GOSPEL STRINGS", kStrings, {{kCutoff, 2400}, {kChorusMix, 65}, {kReverbMix, 40}});
-        patch("GOSPEL BRASS", kBrass, {{kCutoff, 2400}, {kDrive, 25}, {kChorusMix, 55}});
-
-        // ---- COUNTRY: clean and twangy ----
-        patch("COUNTRY LEAD", kLead, {{kCutoff, 3600}, {kChorusMix, 35}, {kDelayMix, 18}});
-        patch("COUNTRY BASS", kBass, {{kCutoff, 800}, {kSubLevel, 50}, {kDecay, 220}, {kChorusMix, 12}});
-        patch("COUNTRY KEY", kKey, {{kCutoff, 2800}, {kChorusMix, 45}, {kReverbMix, 22}});
-        patch("COUNTRY PAD", kPad, {{kCutoff, 1600}, {kChorusMix, 60}, {kReverbMix, 35}});
-        patch("COUNTRY STRINGS", kStrings, {{kCutoff, 2800}, {kChorusMix, 55}, {kReverbMix, 30}});
-        patch("COUNTRY BRASS", kBrass, {{kCutoff, 2800}, {kChorusMix, 50}, {kReverbMix, 25}});
-
-        // ---- INDUSTRIAL: harsh and mechanical ----
-        patch("INDUSTRIAL LEAD", kLead, {{kCutoff, 2800}, {kReso, 55}, {kDrive, 55}, {kLfoShape, 2}, {kLfoRate, 9.0f}, {kLfoPitch, 0.16f}, {kDelayMix, 25}});
-        patch("INDUSTRIAL BASS", kBass, {{kCutoff, 600}, {kReso, 60}, {kDrive, 55}, {kSubLevel, 60}, {kChorusMix, 10}});
-        patch("INDUSTRIAL KEY", kKey, {{kCutoff, 2000}, {kReso, 45}, {kChorusMix, 40}});
-        patch("INDUSTRIAL PAD", kPad, {{kCutoff, 1100}, {kReso, 40}, {kChorusMix, 60}, {kReverbMix, 45}});
-        patch("INDUSTRIAL STRINGS", kStrings, {{kCutoff, 1800}, {kDrive, 40}, {kChorusMix, 45}});
-        patch("INDUSTRIAL BRASS", kBrass, {{kCutoff, 1700}, {kReso, 50}, {kDrive, 50}, {kChorusMix, 35}});
-
-        // ---- BREAKBEAT: grit and punch ----
-        patch("BREAKBEAT LEAD", kLead, {{kCutoff, 3400}, {kReso, 35}, {kDrive, 35}, {kDelayMix, 22}, {kReverbMix, 22}});
-        patch("BREAKBEAT BASS", kBass, {{kCutoff, 650}, {kReso, 45}, {kDrive, 45}, {kSubLevel, 60}, {kDecay, 200}, {kChorusMix, 10}});
-        patch("BREAKBEAT KEY", kKey, {{kCutoff, 2400}, {kChorusMix, 45}, {kReverbMix, 25}});
-        patch("BREAKBEAT PAD", kPad, {{kCutoff, 1300}, {kChorusMix, 65}, {kReverbMix, 45}});
-        patch("BREAKBEAT STRINGS", kStrings, {{kCutoff, 2200}, {kChorusMix, 55}, {kReverbMix, 35}});
-        patch("BREAKBEAT BRASS", kBrass, {{kCutoff, 2100}, {kDrive, 40}, {kChorusMix, 40}});
     }
 
     // ----- lifecycle --------------------------------------------------------
