@@ -185,6 +185,59 @@
       "name": "FX",
       "controls": [
         {
+          "param": "Delay Mix",
+          "widget": "knob"
+        },
+        {
+          "param": "Delay Time",
+          "widget": "knob"
+        },
+        {
+          "param": "Delay Feedback",
+          "widget": "knob"
+        },
+        {
+          "param": "Delay Tone",
+          "widget": "knob"
+        },
+        {
+          "param": "Delay Sync",
+          "widget": "switch"
+        },
+        {
+          "param": "Delay Div",
+          "widget": "slider",
+          "overlay": "menu"
+        },
+        {
+          "param": "Delay Duck",
+          "widget": "knob"
+        },
+        {
+          "param": "Delay Ping",
+          "widget": "switch"
+        },
+        {
+          "param": "Reverb Mix",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb Size",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb Decay",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb Damp",
+          "widget": "knob"
+        },
+        {
+          "param": "Reverb Pre",
+          "widget": "knob"
+        },
+        {
           "param": "Chorus Mix",
           "widget": "knob"
         },
@@ -195,10 +248,12 @@
         {
           "param": "Chorus Rate",
           "widget": "knob"
-        },
-        {
-          "widget": "empty"
-        },
+        }
+      ]
+    },
+    {
+      "name": "VULCAN",
+      "controls": [
         {
           "param": "Vulcan Depth",
           "widget": "knob"
@@ -214,14 +269,50 @@
         {
           "param": "Vulcan Spread",
           "widget": "knob"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
+        },
+        {
+          "widget": "empty"
         }
       ]
     }
   ],
   "style": {
-    "background": "ff0a0a0a",
+    "background": "ff05070a",
     "accent": "ff00f2ff",
-    "text": "ffc8c8c8",
+    "text": "ffc8d4dc",
     "muted": "ff8c97a8"
   }
 }

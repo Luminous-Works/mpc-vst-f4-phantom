@@ -225,7 +225,7 @@
                                                 "style": "Regular",
                                                 "height": 26.0
                                             },
-                                            "colour": "ffc8c8c8",
+                                            "colour": "ffc8d4dc",
                                             "justification": "right",
                                             "case": "Original"
                                         },
@@ -648,7 +648,7 @@
                                                 "style": "Regular",
                                                 "height": 30.0
                                             },
-                                            "colour": "ffc8c8c8",
+                                            "colour": "ffc8d4dc",
                                             "justification": "left",
                                             "case": "Original"
                                         },
@@ -823,7 +823,7 @@
                                                 "style": "Regular",
                                                 "height": 30.0
                                             },
-                                            "colour": "ffc8c8c8",
+                                            "colour": "ffc8d4dc",
                                             "justification": "left",
                                             "case": "Original"
                                         },
@@ -1060,7 +1060,7 @@
                                                 "style": "Regular",
                                                 "height": 30.0
                                             },
-                                            "colour": "ffc8c8c8",
+                                            "colour": "ffc8d4dc",
                                             "justification": "left",
                                             "case": "Original"
                                         },
@@ -1122,12 +1122,12 @@
                             "version": 1,
                             "focussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             },
                             "unfocussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             }
                         },
@@ -1184,12 +1184,12 @@
                             "version": 1,
                             "focussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             },
                             "unfocussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             }
                         },
@@ -1246,12 +1246,12 @@
                             "version": 1,
                             "focussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             },
                             "unfocussed": {
                                 "version": 1,
-                                "colour": "ff0a0a0a",
+                                "colour": "ff05070a",
                                 "image": ""
                             }
                         },
@@ -1447,7 +1447,7 @@
                                                 "style": "Regular",
                                                 "height": 30.0
                                             },
-                                            "colour": "ffc8c8c8",
+                                            "colour": "ffc8d4dc",
                                             "justification": "left",
                                             "case": "Original"
                                         },
@@ -1673,6 +1673,42 @@
                     "1/1",
                     "2/1"
                 ]
+            },
+            {
+                "key": "Parameter 47",
+                "value": [
+                    "Off",
+                    "On"
+                ]
+            },
+            {
+                "key": "Parameter 48",
+                "value": [
+                    "1/64",
+                    "1/32T",
+                    "1/32",
+                    "1/16T",
+                    "1/16",
+                    "1/8T",
+                    "1/16D",
+                    "1/8",
+                    "1/4T",
+                    "1/8D",
+                    "1/4",
+                    "1/2T",
+                    "1/4D",
+                    "1/2",
+                    "1/2D",
+                    "1/1",
+                    "2/1"
+                ]
+            },
+            {
+                "key": "Parameter 50",
+                "value": [
+                    "Off",
+                    "On"
+                ]
             }
         ],
         "info": {
@@ -1692,12 +1728,12 @@
                         "version": 1,
                         "focussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         },
                         "unfocussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         }
                     },
@@ -1720,7 +1756,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1758,7 +1794,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1796,7 +1832,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1834,7 +1870,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1872,7 +1908,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1910,7 +1946,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1948,7 +1984,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -1986,7 +2022,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -2435,12 +2471,12 @@
                         "version": 1,
                         "focussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         },
                         "unfocussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         }
                     },
@@ -2463,7 +2499,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -2501,7 +2537,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -2539,7 +2575,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -2577,7 +2613,7 @@
                                             "style": "Regular",
                                             "height": 22.0
                                         },
-                                        "colour": "ffc8c8c8",
+                                        "colour": "ffc8d4dc",
                                         "justification": "horizontallyCentred verticallyCentred",
                                         "case": "Original"
                                     },
@@ -2910,12 +2946,12 @@
                         "version": 1,
                         "focussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         },
                         "unfocussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         }
                     },
@@ -3088,12 +3124,12 @@
                         "version": 1,
                         "focussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         },
                         "unfocussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         }
                     },
@@ -3330,18 +3366,395 @@
                         "version": 1,
                         "focussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         },
                         "unfocussed": {
                             "version": 1,
-                            "colour": "ff0a0a0a",
+                            "colour": "ff05070a",
                             "image": "bg.png"
                         }
                     },
                     "ignoreMousePresses": false,
                     "disableCoarseDataWheel": false,
                     "componentsData": [
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Mix",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 43"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "23 45 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Time",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 44"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "343 45 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Feedback",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 45"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "663 45 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Tone",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 46"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "983 45 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Sync",
+                                "type": "toggle",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 47"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "23 196 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Div",
+                                "type": "choiceValue",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 48"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "343 196 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Duck",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 49"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "663 196 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Delay Ping",
+                                "type": "toggle",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 50"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "983 196 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Reverb Mix",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 51"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "23 346 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Reverb Size",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 52"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "343 346 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Reverb Decay",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 53"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "663 346 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Reverb Damp",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 54"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "983 346 278 107"
+                            }
+                        },
+                        {
+                            "version": 2,
+                            "componentData": {
+                                "version": 1,
+                                "name": "Reverb Pre",
+                                "type": "knobUni",
+                                "data": {
+                                    "version": 1,
+                                    "handleName": "Data"
+                                }
+                            },
+                            "handle remapping": {
+                                "version": 1,
+                                "map": [
+                                    {
+                                        "key": "Data",
+                                        "value": "Parameter 55"
+                                    }
+                                ]
+                            },
+                            "bounds": {
+                                "version": 1,
+                                "acceptsHWFocus": "Yes",
+                                "showWhenDataModelInvalid": "Hide",
+                                "whenVisible": "Always",
+                                "boundsType": "Absolute",
+                                "bounds": "23 497 278 107"
+                            }
+                        },
                         {
                             "version": 2,
                             "componentData": {
@@ -3368,7 +3781,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "23 45 278 107"
+                                "bounds": "343 497 278 107"
                             }
                         },
                         {
@@ -3397,7 +3810,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "343 45 278 107"
+                                "bounds": "663 497 278 107"
                             }
                         },
                         {
@@ -3426,9 +3839,42 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "663 45 278 107"
+                                "bounds": "983 497 278 107"
                             }
+                        }
+                    ]
+                },
+                "qlinkBoundsData": [
+                    "38 0 248 624",
+                    "358 0 248 624",
+                    "678 0 248 624",
+                    "998 0 248 624"
+                ]
+            },
+            {
+                "version": 1,
+                "tabName": "VULCAN",
+                "fnKeyIndex": 5,
+                "fnKeySubIndex": 0,
+                "componentDefinition": {
+                    "version": 2,
+                    "actions": [],
+                    "backgroundData": {
+                        "version": 1,
+                        "focussed": {
+                            "version": 1,
+                            "colour": "ff05070a",
+                            "image": "bg.png"
                         },
+                        "unfocussed": {
+                            "version": 1,
+                            "colour": "ff05070a",
+                            "image": "bg.png"
+                        }
+                    },
+                    "ignoreMousePresses": false,
+                    "disableCoarseDataWheel": false,
+                    "componentsData": [
                         {
                             "version": 2,
                             "componentData": {
@@ -3455,7 +3901,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "23 196 278 107"
+                                "bounds": "23 45 278 107"
                             }
                         },
                         {
@@ -3484,7 +3930,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "343 196 278 107"
+                                "bounds": "343 45 278 107"
                             }
                         },
                         {
@@ -3513,7 +3959,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "663 196 278 107"
+                                "bounds": "663 45 278 107"
                             }
                         },
                         {
@@ -3542,7 +3988,7 @@
                                 "showWhenDataModelInvalid": "Hide",
                                 "whenVisible": "Always",
                                 "boundsType": "Absolute",
-                                "bounds": "983 196 278 107"
+                                "bounds": "983 45 278 107"
                             }
                         }
                     ]

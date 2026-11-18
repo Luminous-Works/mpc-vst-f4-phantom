@@ -113,17 +113,42 @@ Parameter 0 is Master Volume. The host nudges parameter 0 on every load; it is d
 | LFO>Filter | -100 .. 100 | 0 | % | LFO filter modulation depth |
 | Wheel Vib | 0 .. 12 | 0.5 | st | Mod wheel vibrato depth |
 
-### FX Page (v1.1)
+### FX Page (v1.2)
 
 | Parameter | Range | Default | Unit | Notes |
 |-----------|-------|---------|------|-------|
+| Delay Mix | 0 .. 100 | 0 | % | Delay on the master, after the chorus |
+| Delay Time | 10 .. 2000 | 350 | ms | The repeat length when Delay Sync is off |
+| Delay Feedback | 0 .. 95 | 35 | % | How much of each repeat comes back. The feedback path is saturated, so the tail cannot run away |
+| Delay Tone | 200 .. 18000 | 5000 | Hz | The damping of the repeats: the tail gets darker as it repeats |
+| Delay Sync | Off / On | Off | — | Lock the repeat to the host tempo |
+| Delay Div | Division list | 1/8 | — | The musical division used when Delay Sync is on |
+| Delay Duck | 0 .. 24 | 0 | dB | The input pulls the repeats down, so a new note does not sit on the ones it just made |
+| Delay Ping | Off / On | On | — | Ping-pong: the echo crosses from left to right |
+| Reverb Mix | 0 .. 100 | 0 | % | Reverb on the master, after the delay |
+| Reverb Size | 0 .. 100 | 50 | % | The size of the room: the comb lengths scale with it |
+| Reverb Decay | 0.3 .. 8 | 2 | s | The RT60: the time the tail takes to fall 60 dB |
+| Reverb Damp | 0 .. 100 | 40 | % | How fast the top of the tail dies against the bottom |
+| Reverb Pre | 0 .. 120 | 10 | ms | The gap between the dry sound and the room |
 | Chorus Mix | 0 .. 100 | 0 | % | Stereo chorus on the master; also widens the output to true stereo |
 | Chorus Depth | 0 .. 100 | 50 | % | Modulation depth |
 | Chorus Rate | 0.1 .. 4 | 0.6 | Hz | Modulation rate |
+
+### VULCAN Page (v1.2)
+
+| Parameter | Range | Default | Unit | Notes |
+|-----------|-------|---------|------|-------|
 | Vulcan Depth | 0 .. 100 | 0 | % | The rotary gate. 0 = off |
 | Vulcan Rate | 240 .. 7200 | 3000 | rpm | Rounds per minute at full spin: 2,500 (T45, 1949), 4,000 (T45, 1950), 6,000 (M61), 7,200 (Project Vulcan, 1946) |
 | Vulcan Spin | 0 .. 2000 | 400 | ms | Spool-up: the barrels start nearly still after each note and accelerate to Rate |
 | Vulcan Spread | 0 .. 100 | 35 | % | How unevenly the six barrels fire; more spread, more ratchet |
+
+**DELAY.** The repeat length is read with a cubic interpolation, so it can land on a fraction of a sample and the echo still arrives exactly where the music says it should. The length glides when you
+change it, so a change never clicks. The feedback path is filtered, saturated and DC-blocked: the repeats get darker as they go, the saturation is what stops a long tail from running away, and the DC block is what
+keeps the tail centred.
+
+**REVERB.** A plate: four comb filters whose decay gain is calculated from the RT60 you asked for, two allpasses to smear the early reflections, eight early-reflection taps in front, and a slow drift on
+every comb so the tail does not ring on a fixed grid. The level does not change with the decay time: a long tail is a long tail, not a louder one.
 
 **VULCAN** is a six-barrel rotary gate after the filter: one shot per barrel cycle, six barrels firing in a fixed rotating pattern, spooling up from rest on every note. At 6,000 rpm it is the cannon's buzz; at 500 to 1,500 rpm with a long spin it is a gun winding up.
 
@@ -149,6 +174,27 @@ Parameter IDs and order are permanent. Do not reorder or remove; append new para
 | Vulcan Rotary | saw + square, the rotary gate at 6,000 rpm with a 700 ms spool-up. |
 | F-4E Gun Run | low saws and sub, the gate at 1,320 rpm with a 1.3 s spool-up: the gun winding up. |
 | Acid Line | saw, resonant low-pass, hard envelope, glide. |
+
+### The genre library (v1.2)
+
+The fourteen configurations above are the originals. On top of them, v1.2 carries **180 patches**: every genre the synth is played in, and in each genre one voice of every family.
+
+| Family | What it is |
+|---------|-----------|
+| LEAD | a cutting, wide lead; the one that plays the melody |
+| BASS | saw plus square and sub, filtered down, monophonic in feel |
+| KEY | triangle over an octave-up sine: the electric-piano voice |
+| PAD | slow attack, detuned saws, the widest of the six |
+| STRINGS | saws with a slow swell and a touch of vibrato |
+| BRASS | a filtered saw swell with drive, for stabs and horn-like lines |
+
+The genres: **8BIT, ACID, AMBIENT, BREAKBEAT, COUNTRY, DISCO, DISCO HOUSE, DNB, DUBSTEP, EDM, ELECTRO, FUNK, GOSPEL, HARDSTYLE, HIPHOP, HOUSE, INDIE, INDUSTRIAL, JAZZ, LATIN, LOFI, POP, PSYTRANCE, RNB, ROCK, SYNTHWAVE, TECHNO, TRANCE, TRAP, UKG**.
+
+Every patch is named `<GENRE> <FAMILY>` - `EDM LEAD`, `HOUSE PAD`, `ACID BASS` - so the MPC's own preset list groups them by genre down the page, the way an MPC's own 808 or 909 kits do. The MPC sorts a plugin's programs by name, so
+the library reads as a shelf of genres rather than a wall of patches.
+
+Each family starts from one archetype: the warmth and the width (chorus on, a little drive, the delay and the reverb in the mix) are the same in all 30 genres. The genre line is what changes it - Hardstyle's bass is heavy and
+saturated, Psytrance moves, Industrial is harsh and resonant, Country is clean and twangy, Gospel has the tremolo, UK Garage is bouncy and shuffled, Disco House is bright with a lot of chorus.
 
 Configurations are stored per-project on the MPC. Parameter ID permanence means old projects recall correctly even after unit updates.
 

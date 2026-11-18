@@ -1,7 +1,7 @@
 {
   "name": "F4 Phantom",
   "manufacturer": "Lumina Aerospace LLC",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "format": "vst2",
   "kind": "instrument",
   "uid": "F4PH",
@@ -10,6 +10,6 @@
   "category": "Synth",
   "file32": "VST/f4-phantom-arm32.so",
   "file64": "VST/f4-phantom-arm64.so",
-  "description": "F4 Phantom: 8-voice subtractive synthesizer. Two PolyBLEP oscillators plus a sub, SVF filter, dual ADSRs, tempo-syncable LFO, glide, analog drift and a stereo chorus. 12 factory sounds. Lumina Aerospace LLC.",
+  "description": "F4 Phantom: 8-voice subtractive synthesizer. Two PolyBLEP oscillators plus a sub, SVF filter, dual ADSRs, tempo-syncable LFO, glide, analog drift, a stereo chorus, a tempo-syncable delay and a plate reverb. 146 factory sounds in 22 genres. Lumina Aerospace LLC.",
   "license": "MIT"
 }
